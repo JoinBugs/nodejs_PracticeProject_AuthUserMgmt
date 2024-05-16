@@ -16,6 +16,9 @@ const doesExist = (username)=>{
   }
 }
 
+const doesExist2 = (username, password) =>
+        users.filter(user => user.username === username && (!password || user.password === password)).length > 0
+
 const authenticatedUser = (username,password)=>{
   let validusers = users.filter((user)=>{
     return (user.username === username && user.password === password)
